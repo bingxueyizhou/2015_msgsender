@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Main" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/eT_name"
+            android:hint="姓名"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:ems="10" >
+
+            <requestFocus android:layout_width="wrap_content" />
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/eT_number"
+            android:hint="电话"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/bu_add"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="添加" />
+    </LinearLayout>
+    
+	<Button
+	        android:id="@+id/bu_send"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:text="发送" />
+	
+	<EditText
+            android:id="@+id/eT_msg"
+            android:hint="内容"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/bu_send"
+            android:ems="10" >
+    </EditText>
+	
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayout1"
+        android:layout_above="@id/eT_msg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+		        android:id="@+id/tV_content"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="@string/hello_world" />
+        </LinearLayout>
+    </ScrollView>
+
+    
+
+</RelativeLayout>
